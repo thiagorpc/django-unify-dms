@@ -1,0 +1,29 @@
+{
+  "name": "django-unify-dms",
+  "version": "1.6.1",
+  "description": "Softphone para configuração e administração de telefones IPs DP10 e DP12, com suporte a API para integração com ao OpenScape Voice.",
+  "scripts": {
+    "lint": "eslint ."
+  },
+  "engines": {
+    "node": "8.11.3"
+  },
+  "devDependencies": {
+    "eslint": "5.0.0",
+    "eslint-config-google": "0.9.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/thiagorpc/django-unify-dms"
+  },
+  "keywords": [
+    "django",
+    "admin-panel",
+    "open-source"
+  ],
+  "author": "Thiago Costa",
+  "contributors": [
+    "Support <support@mahbiee.com>"
+  ],
+  "license": "MIT"
+}
