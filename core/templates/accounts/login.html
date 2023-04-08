@@ -1,0 +1,84 @@
+{% extends "layouts/baseLogin.html" %}
+
+{% block title %} Login {% endblock %}
+
+<!-- Specific Page CSS goes HERE  -->
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+
+<div class="main-content-container">
+  <!-- Page Header -->
+  <div class="page-header row no-gutters py-4" >
+    <div class="col-12 text-center text-sm-center" style="padding-top: 50px;">
+      <h6 class="page-title" style="color:#fff; font-size: 36px;">Unify Device Cloud Management</h6>
+    </div>
+  </div>
+  <!-- End Page Header -->
+  <!-- Default Light Table -->
+  <div class="row no-gutters py-4">
+    <div class="col"></div>
+    <div class="col-lg-4">
+      <div class="card card-small mb-4">
+        <div class="card-header border-bottom">
+          <h6 class="m-0">
+
+            {% if msg %}
+              <div class="p-3 mb-2 bg-warning text-dark">  {{ msg | safe }}</div>
+            {% else %}
+              Enter your credentials here
+            {% endif %}
+
+          </h6>
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item p-3">
+            <div class="row">
+              <div class="col">
+
+                <form role="form" method="post" action="" class="pt-4">
+
+                  {% csrf_token %}
+
+                  <div class="form-row">
+                    <div class="form-group col-md-12">
+                      <label for="feFirstName">Username</label>
+                      {{ form.username }}
+                    </div>
+                  </div>
+                  <div class="form-row">
+                    <div class="form-group col-md-12">
+                      <label for="feEmailAddress">Password</label>
+                      {{ form.password }}
+                    </div>
+                  </div>
+                  <button type="submit" name="login" class="btn btn-accent" style="font-size:15px;">Login</button>
+                </form>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="col"></div>
+  </div>
+  <!-- End Default Light Table -->
+  <!-- Page Footer -->
+  <div class="page-header row no-gutters py-4">
+    <div class="col-12 text-center text-sm-center mb-0" >
+        <div class="d-table m-auto" >
+          <img id="main-logo" class="d-inline-block align-top mr-1"
+            style="height: 100px; position: relative; max-width: 144px; background-repeat: no-repeat; background-size: contain;"
+            src="/static/assets/img/brandname_logo_bg_login.png" 
+            background-position-x: right; alt="Dashboard">
+          <!--span class="d-none d-md-inline ml-1">Unify DCM</span-->
+        </div>
+    </div>
+  </div>
+  <!-- End Page Footer -->
+</div>
+
+{% endblock content %}
+
+<!-- Specific Page JS goes HERE  -->
+{% block javascripts %}{% endblock javascripts %}
